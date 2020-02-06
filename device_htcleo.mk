@@ -19,7 +19,6 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/htcleo/overlay
 # Packages
 PRODUCT_PACKAGES += \
 	sensors.htcleo \
-	lights.htcleo
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
@@ -96,6 +95,10 @@ PRODUCT_PACKAGES += \
 	memtrack.qsd8k \
 	libstlport
 
+# Lights
+PRODUCT_PACKAGES += \
+    	android.hardware.light@2.0-impl \
+	lights.htcleo
 # Omx
 # PRODUCT_PACKAGES += \
 #	libOmxCore \
