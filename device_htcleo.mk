@@ -25,6 +25,10 @@ PRODUCT_COPY_FILES += \
 	device/htc/htcleo/ramdisk/init.htcleo.usb.rc:root/init.htcleo.usb.rc \
 	device/htc/htcleo/ramdisk/ueventd.htcleo.rc:root/ueventd.htcleo.rc
 
+# GNSS HAL
+PRODUCT_PACKAGES += \
+    	android.hardware.gnss@1.0-impl
+
 # GPS
 PRODUCT_COPY_FILES += \
 	device/htc/htcleo/configs/gps.conf:system/etc/gps.conf
