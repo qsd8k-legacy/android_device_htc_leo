@@ -210,11 +210,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	wifi.interface=wlan0
 
 # Set usb type
-ADDITIONAL_DEFAULT_PROPERTIES += \
-	persist.service.adb.enable=1 \
-	ro.adb.secure=0 \
-	ro.secure=0 \
-	ro.allow.mock.location=1
+#ADDITIONAL_DEFAULT_PROPERTIES += \
+#	persist.service.adb.enable=1 \
+#	ro.adb.secure=0 \
+#	ro.secure=0 \
+#	ro.allow.mock.location=1
 
 # Permissions
 PRODUCT_COPY_FILES += \

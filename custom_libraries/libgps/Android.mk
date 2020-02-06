@@ -4,7 +4,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_MODULE := libgps
-
+LOCAL_LDLIBS := -llog
 LOCAL_SHARED_LIBRARIES := libutils libcutils librpc
 
 LOCAL_C_INCLUDES := \

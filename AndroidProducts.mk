@@ -18,5 +18,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/device_htcleo.mk \
     $(LOCAL_DIR)/lineage.mk

@@ -125,11 +125,6 @@
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
 
-    <!-- Vibrator pattern for feedback about booting with safe mode disabled -->
-    <integer-array name="config_safeModeDisabledVibePattern">
-        <item>1</item>
-    </integer-array>
-
     <!-- Control the behavior when the user long presses the home button.
             0 - Nothing
             1 - Recent apps view in SystemUI

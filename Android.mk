@@ -16,14 +16,11 @@ ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),htcleo)
 
 LOCAL_PATH:= $(call my-dir)
 subdir_makefiles := \
-    $(LOCAL_PATH)/custom_libraries/camera/Android.mk \
     $(LOCAL_PATH)/custom_libraries/librpc/Android.mk \
     $(LOCAL_PATH)/custom_libraries/liblights/Android.mk \
     $(LOCAL_PATH)/custom_libraries/gpsshim/Android.mk \
     $(LOCAL_PATH)/custom_libraries/libgps/Android.mk \
     $(LOCAL_PATH)/custom_libraries/libsensors/Android.mk \
-    $(LOCAL_PATH)/custom_libraries/libstlport/Android.mk \
-    $(LOCAL_PATH)/custom_libraries/libshims/Android.mk \
     $(LOCAL_PATH)/custom_libraries/power/Android.mk
 
 include $(subdir_makefiles)

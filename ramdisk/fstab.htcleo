@@ -1,9 +1,9 @@
 ## Android fstab for HTC Leo
 
 #<label>                                       <mnt_point>            <type>          <mnt_flags and options>        <fs_mgr_flags>
-boot                                           /boot                  mtd             defaults                        defaults
-misc                                           /misc                  mtd             defaults                        defaults
-recovery                                       /recovery              mtd             defaults                        defaults
+/dev/block/mmcblk0p4                           /boot                  emmc             defaults                        recoveryonly
+/dev/block/mmcblk0p5                           /misc                  emmc             defaults                        recoveryonly
+/dev/block/mmcblk0p6                           /recovery              emmc             defaults                        recoveryonly
 /dev/block/mmcblk0p2                           /system                ext4            noatime,noauto_da_alloc,journal_async_commit,errors=panic wait,check
 /dev/block/mmcblk0p3                           /data                  ext4            noatime,noauto_da_alloc,journal_async_commit,errors=panic wait,check
 

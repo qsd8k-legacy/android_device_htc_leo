@@ -24,6 +24,7 @@
  ******************************************************************************/
 
 #include <errno.h>
+#include <log/log.h>
 #include <semaphore.h>
 #include <pthread.h>
 #include <fcntl.h>
