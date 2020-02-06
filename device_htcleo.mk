@@ -98,7 +98,8 @@ PRODUCT_PACKAGES += \
 	hostapd \
 	libwpa_client \
 	wpa_supplicant.conf \
-	wpa_supplicant
+	wpa_supplicant \
+	wificond
 
 PRODUCT_PACKAGES += \
 	mkfs.f2fs \
