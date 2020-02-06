@@ -38,6 +38,10 @@ PRODUCT_PACKAGES += \
 	libgps \
 	librpc
 
+# HIDL
+PRODUCT_COPY_FILES += \
+    	device/htc/htcleo/manifest.xml:system/vendor/manifest.xml
+
 # Keylayouts
 PRODUCT_COPY_FILES += \
 	device/htc/htcleo/keylayout/htcleo-keypad.kl:system/usr/keylayout/htcleo-keypad.kl \
