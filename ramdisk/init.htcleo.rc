@@ -7,6 +7,9 @@ on init
 #    export LD_SHIM_LIBS "/system/lib/libcamera.so|libshim_camera.so:/system/lib/libcamera.so|libshim_skia.so"
 
 on fs
+    wait /dev/block/platform/${ro.boot.bootdevice}
+    symlink /dev/block/platform/${ro.boot.bootdevice} /dev/block/bootdevice
+
     # Mount all partitions
     mount_all /fstab.htcleo
 
