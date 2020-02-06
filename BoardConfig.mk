@@ -61,7 +61,6 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/htcleo/bluetooth/inclu
 
 # Display
 BOARD_EGL_CFG := device/htc/htcleo/configs/egl.cfg
-USE_OPENGL_RENDERER := true
 BOARD_ADRENO_DECIDE_TEXTURE_TARGET := true
 TARGET_DISABLE_TRIPLE_BUFFERING := true
 BOARD_NEEDS_MEMORYHEAPPMEM := true
@@ -133,3 +132,7 @@ BLOCK_BASED_OTA := false
 # Recovery
 TARGET_RECOVERY_FSTAB := device/htc/htcleo/ramdisk/fstab.htcleo
 RECOVERY_FSTAB_VERSION := 2
+
+# Render
+OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
+USE_OPENGL_RENDERER := true

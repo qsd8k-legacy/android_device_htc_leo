@@ -28,7 +28,8 @@ PRODUCT_COPY_FILES += \
     device/htc/htcleo/proprietary/lib/libOpenCL.so:system/lib/libOpenCL.so \
     device/htc/htcleo/proprietary/lib/libsc-a2xx.so:system/lib/libsc-a2xx.so \
     device/htc/htcleo/proprietary/etc/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
-    device/htc/htcleo/proprietary/etc/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw
+    device/htc/htcleo/proprietary/etc/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \
+    device/htc/htcleo/proprietary/vendor/lib/libRSDriver_adreno.so:system/vendor/lib/libRSDriver_adreno.so
 
 # Audio
 PRODUCT_COPY_FILES += \
