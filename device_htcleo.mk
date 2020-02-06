@@ -140,6 +140,10 @@ PRODUCT_PACKAGES += \
 #PRODUCT_PACKAGES += \
 #	Gello
 
+# USB
+PRODUCT_PACKAGES += \
+    	android.hardware.usb@1.0-service \
+
 # Additional Propreties
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.sf.lcd_density=240 \
