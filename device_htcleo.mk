@@ -104,14 +104,18 @@ PRODUCT_PACKAGES += \
 #	libOmxCore \
 #	libstagefrighthw
 
+PRODUCT_PACKAGES += \
+    	android.hardware.power@1.0-impl \
+    	power.qsd8k
+
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl \
-    sensors.htcleo
+    	android.hardware.sensors@1.0-impl \
+    	sensors.htcleo
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl
+    	android.hardware.vibrator@1.0-impl
 
 # Wifi
 PRODUCT_PACKAGES += \
@@ -128,10 +132,6 @@ PRODUCT_PACKAGES += \
 	fsck.f2fs \
 	make_f2fs \
 	mkf2fsuserimg.sh
-
-# Misc
-PRODUCT_PACKAGES += \
-	power.qsd8k
 
 #PRODUCT_PACKAGES += \
 #	Gello
