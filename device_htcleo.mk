@@ -16,10 +16,6 @@
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += device/htc/htcleo/overlay
 
-# Packages
-PRODUCT_PACKAGES += \
-	sensors.htcleo \
-
 # Ramdisk
 PRODUCT_COPY_FILES += \
 	device/htc/htcleo/ramdisk/logo.rle:root/logo.rle \
@@ -107,6 +103,11 @@ PRODUCT_PACKAGES += \
 # PRODUCT_PACKAGES += \
 #	libOmxCore \
 #	libstagefrighthw
+
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
+    sensors.htcleo
 
 # Wifi
 PRODUCT_PACKAGES += \
