@@ -24,6 +24,9 @@ TARGET_SCREEN_WIDTH := 480
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Build Android GO
+$(call inherit-product, build/make/target/product/go_defaults_512.mk)
+
 # Inherit device configuration
 $(call inherit-product, device/htc/htcleo/device_htcleo.mk)
 
