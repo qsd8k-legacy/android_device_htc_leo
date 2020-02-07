@@ -112,7 +112,6 @@ BOARD_VENDOR_USE_AKMD := akm8973
 BOARD_USES_GPSSHIM := true
 BOARD_GPS_LIBRARIES := libgps
 
-
 # ART
 ifeq ($(HOST_OS),linux)
   ifeq ($(TARGET_BUILD_VARIANT),userdebug)
@@ -142,3 +141,6 @@ RECOVERY_FSTAB_VERSION := 2
 # Render
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 USE_OPENGL_RENDERER := true
+
+# USB
+TARGET_USES_LEGACY_ADB_INTERFACE := true
