@@ -7,4 +7,7 @@
 /dev/block/mmcblk0p2                           /system                ext4            noatime,noauto_da_alloc,journal_async_commit,errors=panic wait,check
 /dev/block/mmcblk0p3                           /data                  ext4            noatime,noauto_da_alloc,journal_async_commit,errors=panic wait,check
 
+# zRAM
+/dev/block/zram0                            none                    swap      defaults      zramsize=52428800
+
 /devices/platform/msm_sdcc.2/mmc_host/mmc1* auto vfat defaults voldmanaged=sdcard0:1,noemulatedsd,nonremovable
