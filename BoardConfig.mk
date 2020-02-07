@@ -23,7 +23,7 @@
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
 
-# general 
+# general
 USE_CAMERA_STUB := false
 
 TARGET_SPECIFIC_HEADER_PATH := device/htc/htcleo/include
@@ -52,6 +52,8 @@ BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x11800000
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 BOARD_KERNEL_IMAGE_NAME := zImage
+TARGET_ALLOWS_INVALID_PTHREAD := true
+
 # Audio
 BOARD_USES_GENERIC_AUDIO := true
 TARGET_USES_QCOM_MM_AUDIO := true
