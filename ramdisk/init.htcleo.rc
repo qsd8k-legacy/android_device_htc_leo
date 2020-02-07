@@ -12,6 +12,7 @@ on fs
 
     # Mount all partitions
     mount_all /fstab.htcleo
+    swapon_all /fstab.htcleo
 
 on post-fs-data
     # create dalvik-cache, so as to enforce our permissions
