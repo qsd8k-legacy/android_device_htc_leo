@@ -246,5 +246,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 dalvik.vm.madvise-random=true
 
+# Speed services and wifi-service for better performance.
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed
+
+PRODUCT_PROPERTY_OVERRIDES += \
+     pm.dexopt.shared=speed
+
 # Proprietary
 $(call inherit-product, device/htc/htcleo/proprietary.mk)
