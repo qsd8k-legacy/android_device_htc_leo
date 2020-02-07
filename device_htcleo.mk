@@ -82,7 +82,7 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-	android.hardware.bluetooth@1.0-impl \
+	android.hardware.bluetooth@1.0-impl
 
 # Camera
 #PRODUCT_PACKAGES += \
@@ -106,6 +106,10 @@ PRODUCT_PACKAGES += \
 	hwcomposer.qsd8k \
 	memtrack.qsd8k \
 	libstlport
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    	android.hardware.keymaster@3.0-impl
 
 # Lights
 PRODUCT_PACKAGES += \
