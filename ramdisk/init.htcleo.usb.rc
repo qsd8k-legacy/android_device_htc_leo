@@ -74,7 +74,8 @@ on property:sys.usb.config=adb
     write /sys/class/android_usb/android0/enable 1
     start adbd
     setprop sys.usb.state ${sys.usb.config}
-
+    setprop persist.adb.nonblocking_ffs 0
+    setprop ro.adb.nonblocking_ffs 0
 # UMS
 on property:sys.usb.config=mass_storage
     stop adbd
