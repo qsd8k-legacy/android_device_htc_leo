@@ -80,6 +80,10 @@ PRODUCT_COPY_FILES += \
 # 	audio.a2dp.default \
 # 	audio.primary.qsd8k
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+	android.hardware.bluetooth@1.0-impl \
+
 # Camera
 #PRODUCT_PACKAGES += \
 #	camera.qsd8k \
