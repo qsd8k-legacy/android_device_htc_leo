@@ -71,14 +71,14 @@ PRODUCT_COPY_FILES += \
 	frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
 # Audio
-PRODUCT_PACKAGES += \
-    	android.hardware.audio@2.0-impl \
-    	android.hardware.audio.effect@2.0-impl \
-    	android.hardware.broadcastradio@1.0-impl \
-    	android.hardware.soundtrigger@2.0-impl \
-	audio.usb.default \
-	audio.a2dp.default \
-	audio.primary.qsd8k
+# PRODUCT_PACKAGES += \
+#     	android.hardware.audio@2.0-impl \
+#     	android.hardware.audio.effect@2.0-impl \
+#     	android.hardware.broadcastradio@1.0-impl \
+#     	android.hardware.soundtrigger@2.0-impl \
+# 	audio.usb.default \
+# 	audio.a2dp.default \
+# 	audio.primary.qsd8k
 
 # Camera
 #PRODUCT_PACKAGES += \
