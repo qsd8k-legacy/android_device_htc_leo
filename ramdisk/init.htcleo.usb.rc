@@ -11,6 +11,12 @@
 #   6: RNDIS+ADB
 # 128: MTP/PTP
 # 130: MTP/PTP+ADB
+on fs
+    setprop sys.usb.configfs=0
+    setprop sys.usb.ffs.aio_compat 1
+    setprop persist.adb.nonblocking_ffs 0
+    setprop ro.adb.nonblocking_ffs 0
+
 
 on boot
     write /sys/class/android_usb/android0/iSerial ${ro.serialno}
@@ -22,7 +28,7 @@ on boot
 
 # Used to disable USB when switching states
 on property:sys.usb.config=none
-    stop adbd
+    
     write /sys/class/android_usb/android0/enable 0
     write /sys/devices/platform/android_usb/usb_function_switch 0
     write /sys/class/android_usb/android0/idVendor 0bb4
@@ -34,7 +40,7 @@ on property:sys.usb.config=none
 
 # Charging only
 on property:sys.usb.config=charging
-    stop adbd
+    
     write /sys/class/android_usb/android0/enable 0
     write /sys/devices/platform/android_usb/usb_function_switch 0
     write /sys/class/android_usb/android0/idVendor 0bb4
@@ -47,7 +53,7 @@ on property:sys.usb.config=charging
 
 # adb charging USB configuration
 on property:sys.usb.config=charging,adb
-    stop adbd
+    
     write /sys/class/android_usb/android0/enable 0
     write /sys/devices/platform/android_usb/usb_function_switch 0
     write /sys/class/android_usb/android0/idVendor 0bb4
@@ -62,7 +68,7 @@ on property:sys.usb.config=charging,adb
 
 # adb only USB configuration
 on property:sys.usb.config=adb
-    stop adbd
+    
     write /sys/class/android_usb/android0/enable 0
     write /sys/devices/platform/android_usb/usb_function_switch 0
     write /sys/class/android_usb/android0/idVendor 0bb4
@@ -74,11 +80,10 @@ on property:sys.usb.config=adb
     write /sys/class/android_usb/android0/enable 1
     start adbd
     setprop sys.usb.state ${sys.usb.config}
-    setprop persist.adb.nonblocking_ffs 0
-    setprop ro.adb.nonblocking_ffs 0
+
 # UMS
 on property:sys.usb.config=mass_storage
-    stop adbd
+    
     write /sys/class/android_usb/android0/enable 0
     write /sys/devices/platform/android_usb/usb_function_switch 0
     write /sys/class/android_usb/android0/idVendor 0bb4
@@ -91,7 +96,7 @@ on property:sys.usb.config=mass_storage
     setprop sys.usb.state ${sys.usb.config}
 
 on property:sys.usb.config=mass_storage,adb
-    stop adbd
+    
     write /sys/class/android_usb/android0/enable 0
     write /sys/devices/platform/android_usb/usb_function_switch 0
     write /sys/class/android_usb/android0/idVendor 0bb4
@@ -107,7 +112,7 @@ on property:sys.usb.config=mass_storage,adb
 
 # MTP
 on property:sys.usb.config=mtp
-    stop adbd
+    
     write /sys/class/android_usb/android0/enable 0
     write /sys/devices/platform/android_usb/usb_function_switch 0
     write /sys/class/android_usb/android0/idVendor 0bb4
@@ -120,7 +125,7 @@ on property:sys.usb.config=mtp
     setprop sys.usb.state ${sys.usb.config}
 
 on property:sys.usb.config=mtp,adb
-    stop adbd
+    
     write /sys/class/android_usb/android0/enable 0
     write /sys/devices/platform/android_usb/usb_function_switch 0
     write /sys/class/android_usb/android0/idVendor 0bb4
@@ -135,7 +140,7 @@ on property:sys.usb.config=mtp,adb
 
 # rndis
 on property:sys.usb.config=rndis
-    stop adbd
+    
     write /sys/class/android_usb/android0/enable 0
     write /sys/devices/platform/android_usb/usb_function_switch 0
     write /sys/class/android_usb/android0/f_rndis/vendorID 0bb4
@@ -149,7 +154,7 @@ on property:sys.usb.config=rndis
     setprop sys.usb.state ${sys.usb.config}
 
 on property:sys.usb.config=rndis,adb
-    stop adbd
+    
     write /sys/class/android_usb/android0/enable 0
     write /sys/devices/platform/android_usb/usb_function_switch 0
     write /sys/class/android_usb/android0/f_rndis/vendorID 0bb4
@@ -165,7 +170,7 @@ on property:sys.usb.config=rndis,adb
 
 # PTP
 on property:sys.usb.config=ptp
-    stop adbd
+    
     write /sys/class/android_usb/android0/enable 0
     write /sys/devices/platform/android_usb/usb_function_switch 0
     write /sys/class/android_usb/android0/idVendor 0bb4
@@ -178,7 +183,7 @@ on property:sys.usb.config=ptp
     setprop sys.usb.state ${sys.usb.config}
 
 on property:sys.usb.config=ptp,adb
-    stop adbd
+    
     write /sys/class/android_usb/android0/enable 0
     write /sys/devices/platform/android_usb/usb_function_switch 0
     write /sys/class/android_usb/android0/idVendor 0bb4
@@ -190,4 +195,3 @@ on property:sys.usb.config=ptp,adb
     write /sys/class/android_usb/android0/enable 1
     start adbd
     setprop sys.usb.state ${sys.usb.config}
-
