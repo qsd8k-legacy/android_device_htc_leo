@@ -154,7 +154,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    	android.hardware.usb@1.0-service \
+    	android.hardware.usb@1.0-service.basic \
 
 # Additional Propreties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -174,7 +174,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.ril.oem.nosim.ecclist=911,112,999,000,08,118,120,122,110,119,995 \
 	ro.ril.emc.mode=2 \
 	ro.telephony.ril.config=signalstrengthgsm,apptypesim,datacallapn \
-	persist.sys.usb.config=charging,adb \
+	persist.sys.usb.config=mtp,adb \
 	persist.sys.root_access=1 \
 	persist.sys.purgeable_assets=1 \
 	config.disable_atlas=true \
@@ -198,6 +198,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.vold.primary_physical=1 \
 	persist.graphics.vulkan.disable=true \
 	ro.config.low_ram=true \
+
+# This is needed for the usb workaround
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    sys.usb.ffs.aio_compat=1
 
 # Default heap settings for 512mb device
 include frameworks/native/build/phone-hdpi-512-dalvik-heap.mk
@@ -255,7 +259,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 dalvik.vm.madvise-random=true
 
 # Speed services and wifi-service for better performance.
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed
+#PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed
 
 PRODUCT_PROPERTY_OVERRIDES += \
      pm.dexopt.shared=speed
