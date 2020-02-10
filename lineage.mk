@@ -27,8 +27,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Build Android GO
-$(call inherit-product, build/make/target/product/go_defaults_512.mk)
+# Common Android Go configurations
+$(call inherit-product, device/htc/htcleo/go_defaults.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/htc/htcleo/device_htcleo.mk)

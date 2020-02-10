@@ -157,3 +157,6 @@ HAVE_SELINUX := true
 
 # USB
 TARGET_USES_LEGACY_ADB_INTERFACE := true
+
+# Properties
+TARGET_SYSTEM_PROP += device/htc/htcleo/system.prop

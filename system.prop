@@ -1,0 +1,13 @@
+# Set lowram options
+ro.lmk.critical_upgrade=true
+ro.lmk.upgrade_pressure=40
+ro.lmk.downgrade_pressure=60
+ro.lmk.kill_heaviest_task=false
+ro.statsd.enable=true
+
+# set threshold to filter unused apps
+pm.dexopt.downgrade_after_inactive_days=10
+
+# set the compiler filter for shared apks to quicken.
+# b/65591595.
+pm.dexopt.shared=quicken
