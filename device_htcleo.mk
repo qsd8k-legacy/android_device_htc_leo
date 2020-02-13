@@ -124,6 +124,11 @@ PRODUCT_PACKAGES += \
     	android.hardware.power@1.0-impl \
     	power.qsd8k
 
+# Seccomp
+PRODUCT_COPY_FILES += \
+    device/htc/htcleo/seccomp/mediacodec.policy:system/vendor/etc/seccomp_policy/mediacodec.policy \
+    device/htc/htcleo/seccomp/mediaextractor.policy:system/vendor/etc/seccomp_policy/mediaextractor.policy
+
 # Sensors
 PRODUCT_PACKAGES += \
     	android.hardware.sensors@1.0-impl \
