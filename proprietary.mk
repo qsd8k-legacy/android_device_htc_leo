@@ -24,13 +24,13 @@ PRODUCT_COPY_FILES += \
     device/htc/htcleo/proprietary/vendor/lib/egl/libGLESv2_adreno.so:system/vendor/lib/egl/libGLESv2_adreno.so \
     device/htc/htcleo/proprietary/vendor/lib/egl/libq3dtools_adreno.so:system/vendor/lib/egl/libq3dtools_adreno.so \
     device/htc/htcleo/proprietary/vendor/lib/libgsl.so:system/vendor/lib/libgsl.so \
-    device/htc/htcleo/proprietary/lib/libC2D2.so:system/vendor/lib/libC2D2.so \
-    device/htc/htcleo/proprietary/lib/libsc-a3xx.so:system/vendor/lib/libsc-a3xx.so \
-    device/htc/htcleo/proprietary/lib/libadreno_utils.so:system/vendor/lib/libadreno_utils.so \
-    device/htc/htcleo/proprietary/lib/libbccQTI.so:system/vendor/lib/libbccQTI.so \
-    device/htc/htcleo/proprietary/lib/libc2d30-a3xx.so:system/vendor/lib/libc2d30-a3xx.so \
-    device/htc/htcleo/proprietary/lib/libllvm-qcom.so:system/vendor/lib/libllvm-qcom.so \
-    device/htc/htcleo/proprietary/lib/libsc-a3xx.so:system/vendor/lib/libsc-a3xx.so \
+    device/htc/htcleo/proprietary/vendor/lib/libC2D2.so:system/vendor/lib/libC2D2.so \
+    device/htc/htcleo/proprietary/vendor/lib/libsc-a3xx.so:system/vendor/lib/libsc-a3xx.so \
+    device/htc/htcleo/proprietary/vendor/lib/libadreno_utils.so:system/vendor/lib/libadreno_utils.so \
+    device/htc/htcleo/proprietary/vendor/lib/libbccQTI.so:system/vendor/lib/libbccQTI.so \
+    device/htc/htcleo/proprietary/vendor/lib/libc2d30-a3xx.so:system/vendor/lib/libc2d30-a3xx.so \
+    device/htc/htcleo/proprietary/vendor/lib/libllvm-qcom.so:system/vendor/lib/libllvm-qcom.so \
+    device/htc/htcleo/proprietary/vendor/lib/libsc-a3xx.so:system/vendor/lib/libsc-a3xx.so \
     device/htc/htcleo/proprietary/etc/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
     device/htc/htcleo/proprietary/etc/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \
     device/htc/htcleo/proprietary/vendor/lib/libRSDriver_adreno.so:system/vendor/lib/libRSDriver_adreno.so
