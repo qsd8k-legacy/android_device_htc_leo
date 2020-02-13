@@ -18,15 +18,19 @@
 
 # Adreno
 PRODUCT_COPY_FILES += \
-    device/htc/htcleo/proprietary/lib/egl/eglsubAndroid.so:system/lib/egl/eglsubAndroid.so \
-    device/htc/htcleo/proprietary/lib/egl/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \
-    device/htc/htcleo/proprietary/lib/egl/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
-    device/htc/htcleo/proprietary/lib/egl/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \
-    device/htc/htcleo/proprietary/lib/egl/libplayback_adreno200.so:system/lib/egl/libplayback_adreno200.so \
-    device/htc/htcleo/proprietary/lib/egl/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so \
-    device/htc/htcleo/proprietary/lib/libgsl.so:system/lib/libgsl.so \
-    device/htc/htcleo/proprietary/lib/libOpenCL.so:system/lib/libOpenCL.so \
-    device/htc/htcleo/proprietary/lib/libsc-a2xx.so:system/lib/libsc-a2xx.so \
+    device/htc/htcleo/proprietary/vendor/lib/egl/eglsubAndroid.so:system/vendor/lib/egl/eglsubAndroid.so \
+    device/htc/htcleo/proprietary/vendor/lib/egl/libEGL_adreno.so:system/vendor/lib/egl/libEGL_adreno.so \
+    device/htc/htcleo/proprietary/vendor/lib/egl/libGLESv1_CM_adreno.so:system/vendor/lib/egl/libGLESv1_CM_adreno.so \
+    device/htc/htcleo/proprietary/vendor/lib/egl/libGLESv2_adreno.so:system/vendor/lib/egl/libGLESv2_adreno.so \
+    device/htc/htcleo/proprietary/vendor/lib/egl/libq3dtools_adreno.so:system/vendor/lib/egl/libq3dtools_adreno.so \
+    device/htc/htcleo/proprietary/vendor/lib/libgsl.so:system/vendor/lib/libgsl.so \
+    device/htc/htcleo/proprietary/lib/libC2D2.so:system/vendor/lib/libC2D2.so \
+    device/htc/htcleo/proprietary/lib/libsc-a3xx.so:system/vendor/lib/libsc-a3xx.so \
+    device/htc/htcleo/proprietary/lib/libadreno_utils.so:system/vendor/lib/libadreno_utils.so \
+    device/htc/htcleo/proprietary/lib/libbccQTI.so:system/vendor/lib/libbccQTI.so \
+    device/htc/htcleo/proprietary/lib/libc2d30-a3xx.so:system/vendor/lib/libc2d30-a3xx.so \
+    device/htc/htcleo/proprietary/lib/libllvm-qcom.so:system/vendor/lib/libllvm-qcom.so \
+    device/htc/htcleo/proprietary/lib/libsc-a3xx.so:system/vendor/lib/libsc-a3xx.so \
     device/htc/htcleo/proprietary/etc/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
     device/htc/htcleo/proprietary/etc/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \
     device/htc/htcleo/proprietary/vendor/lib/libRSDriver_adreno.so:system/vendor/lib/libRSDriver_adreno.so
