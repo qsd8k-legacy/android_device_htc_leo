@@ -69,6 +69,10 @@ BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
 BOARD_CUSTOM_BT_CONFIG := device/htc/htcleo/bluetooth//vnd_htcleo.txt
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/htcleo/bluetooth/include
 
+#BSP
+
+QCOM_BSP := true
+
 # Display
 BOARD_EGL_CFG := device/htc/htcleo/configs/egl.cfg
 BOARD_ADRENO_DECIDE_TEXTURE_TARGET := true
