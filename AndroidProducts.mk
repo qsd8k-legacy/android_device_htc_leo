@@ -18,4 +18,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage.mk
+    $(LOCAL_DIR)/aosp_htcleo.mk

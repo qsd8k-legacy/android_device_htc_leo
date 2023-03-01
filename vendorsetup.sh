@@ -14,4 +14,5 @@
 # limitations under the License.
 #
 
-add_lunch_combo lineage_htcleo-userdebug
+add_lunch_combo aosp_htcleo-userdebug
+add_lunch_combo aosp_htcleo-eng
