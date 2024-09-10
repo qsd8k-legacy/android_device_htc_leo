@@ -14,7 +14,7 @@
 
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += device/htc/htcleo/overlay
+DEVICE_PACKAGE_OVERLAYS += device/htc/leo/overlay
 
 # Packages
 PRODUCT_PACKAGES += \
@@ -23,15 +23,15 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-	device/htc/htcleo/ramdisk/logo.rle:root/logo.rle \
-	device/htc/htcleo/ramdisk/fstab.htcleo:root/fstab.htcleo \
-	device/htc/htcleo/ramdisk/init.htcleo.rc:root/init.htcleo.rc \
-	device/htc/htcleo/ramdisk/init.htcleo.usb.rc:root/init.htcleo.usb.rc \
-	device/htc/htcleo/ramdisk/ueventd.htcleo.rc:root/ueventd.htcleo.rc
+	device/htc/leo/ramdisk/logo.rle:root/logo.rle \
+	device/htc/leo/ramdisk/fstab.htcleo:root/fstab.htcleo \
+	device/htc/leo/ramdisk/init.htcleo.rc:root/init.htcleo.rc \
+	device/htc/leo/ramdisk/init.htcleo.usb.rc:root/init.htcleo.usb.rc \
+	device/htc/leo/ramdisk/ueventd.htcleo.rc:root/ueventd.htcleo.rc
 
 # GPS
 PRODUCT_COPY_FILES += \
-	device/htc/htcleo/configs/gps.conf:system/etc/gps.conf
+	device/htc/leo/configs/gps.conf:system/etc/gps.conf
 
 PRODUCT_PACKAGES += \
 	gps.htcleo \
@@ -40,10 +40,10 @@ PRODUCT_PACKAGES += \
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
-	device/htc/htcleo/keylayout/htcleo-keypad.kl:system/usr/keylayout/htcleo-keypad.kl \
-	device/htc/htcleo/keylayout/htcleo-keypad.kcm:system/usr/keychars/htcleo-keypad.kcm \
-	device/htc/htcleo/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
-	device/htc/htcleo/keylayout/htcleo-touchscreen.idc:system/usr/idc/htcleo-touchscreen.idc
+	device/htc/leo/keylayout/htcleo-keypad.kl:system/usr/keylayout/htcleo-keypad.kl \
+	device/htc/leo/keylayout/htcleo-keypad.kcm:system/usr/keychars/htcleo-keypad.kcm \
+	device/htc/leo/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
+	device/htc/leo/keylayout/htcleo-touchscreen.idc:system/usr/idc/htcleo-touchscreen.idc
 
 
 # Leo uses high-density artwork where available
@@ -56,9 +56,9 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # Configs
 PRODUCT_COPY_FILES += \
-	device/htc/htcleo/configs/media_codecs.xml:system/etc/media_codecs.xml \
-	device/htc/htcleo/configs/media_profiles.xml:system/etc/media_profiles.xml \
-	device/htc/htcleo/configs/audio_policy.conf:system/etc/audio_policy.conf
+	device/htc/leo/configs/media_codecs.xml:system/etc/media_codecs.xml \
+	device/htc/leo/configs/media_profiles.xml:system/etc/media_profiles.xml \
+	device/htc/leo/configs/audio_policy.conf:system/etc/audio_policy.conf
 
 # Audio
 PRODUCT_PACKAGES += \

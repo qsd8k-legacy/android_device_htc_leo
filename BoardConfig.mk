@@ -26,7 +26,7 @@
 # general 
 USE_CAMERA_STUB := false
 
-TARGET_SPECIFIC_HEADER_PATH := device/htc/htcleo/include
+TARGET_SPECIFIC_HEADER_PATH := device/htc/leo/include
 
 # Board/CPU
 TARGET_NO_BOOTLOADER := true
@@ -54,11 +54,11 @@ BOARD_KERNEL_NEW_PPPOX := true
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUEDROID_VENDOR_CONF := device/htc/htcleo/bluetooth/libbt_vndcfg.txt
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/htcleo/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/htc/leo/bluetooth/libbt_vndcfg.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/leo/bluetooth
 
 # Display
-BOARD_EGL_CFG := device/htc/htcleo/configs/egl.cfg
+BOARD_EGL_CFG := device/htc/leo/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_ADRENO_DECIDE_TEXTURE_TARGET := true
 TARGET_DISABLE_TRIPLE_BUFFERING := true
@@ -137,5 +137,5 @@ BLOCK_BASED_OTA := false
 #BOARD_HAL_STATIC_LIBRARIES := libhealthd.qsd8k
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/htc/htcleo/ramdisk/fstab.htcleo
+TARGET_RECOVERY_FSTAB := device/htc/leo/ramdisk/fstab.htcleo
 RECOVERY_FSTAB_VERSION := 2
