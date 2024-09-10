@@ -191,4 +191,4 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
 
 # Proprietary
-$(call inherit-product, device/htc/htcleo/proprietary.mk)
+$(call inherit-product, device/htc/leo/proprietary.mk)
