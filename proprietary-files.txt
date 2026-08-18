@@ -1,0 +1,44 @@
+# Adreno
+vendor/lib/egl/eglsubAndroid.so
+vendor/lib/egl/libEGL_adreno.so
+vendor/lib/egl/libGLESv1_CM_adreno.so
+vendor/lib/egl/libGLESv2_adreno.so
+vendor/lib/egl/libq3dtools_adreno.so
+vendor/lib/libgsl.so
+vendor/lib/libC2D2.so
+vendor/lib/libsc-a3xx.so
+vendor/lib/libadreno_utils.so
+vendor/lib/libbccQTI.so
+vendor/lib/libc2d30-a3xx.so
+vendor/lib/libllvm-qcom.so
+etc/firmware/yamato_pfp.fw
+etc/firmware/yamato_pm4.fw
+vendor/lib/libRSDriver_adreno.so
+
+# Audio
+etc/AdieHWCodecSetting.csv
+etc/AudioBTID.csv
+lib/libhtc_acoustic.so 
+
+# Camera
+lib/liboemcamera.so
+lib/libcamera.so
+
+# Compass
+bin/akmd
+
+# Firmware
+etc/firmware/bcm4329.hcd
+etc/firmware/fw_bcmdhd.bin:vendor/etc/firmware/fw_bcmdhd.bin
+etc/firmware/fw_bcmdhd_apsta.bin:vendor/etc/firmware/fw_bcmdhd_apsta.bin
+etc/firmware/default.acdb
+
+# Radio log
+bin/parse_radio_log 
+
+# RIL
+lib/libhtc_ril.so
+
+# Omx
+lib/libOmxVdec.so
+lib/libOmxVidEnc.so
