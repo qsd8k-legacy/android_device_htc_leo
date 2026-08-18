@@ -122,15 +122,11 @@ BOARD_USES_GPSSHIM := true
 BOARD_GPS_LIBRARIES := libgps
 
 # ART
-ifeq ($(HOST_OS),linux)
-  ifeq ($(TARGET_BUILD_VARIANT),userdebug)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-    endif
-  endif
-endif
-WITH_DEXPREOPT_BOOT_IMG_ONLY := true
 #MALLOC_SVELTE := true
+
+WITH_DEXPREOPT := true
+
+BOARD_CUSTOM_BOOTIMG_MK := device/htc/htcleo/mkbootimg.mk
 
 # Recovery
 TARGET_USERIMAGES_USE_F2FS := true
