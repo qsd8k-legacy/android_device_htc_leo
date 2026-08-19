@@ -25,7 +25,7 @@ $(PADDED_RAMDISK_TARGET): $(INSTALLED_RAMDISK_TARGET) $(PADDING)
 	$(call pretty,"Target padded ramdisk: $(INSTALLED_RAMDISK_TARGET)")
 	$(hide) mkdir -p $(dir $@)
 	$(hide) mv $(INSTALLED_RAMDISK_TARGET) $(INSTALLED_RAMDISK_TARGET).orig
-	$(hide) cat $(INSTALLED_RAMDISK_TARGET).orig $(PADDING) > $(INSTALLED_RAMDISK_TARGET)
+	$(hide) cat $(PADDING) $(INSTALLED_RAMDISK_TARGET).orig > $(INSTALLED_RAMDISK_TARGET)
 	$(hide) touch $@
 
 # Pad the recovery ramdisk (in-place). Same reasoning as above.
@@ -33,7 +33,7 @@ $(PADDED_RECOVERY_RAMDISK_TARGET): $(INSTALLED_RECOVERY_RAMDISK_TARGET) $(PADDIN
 	$(call pretty,"Target padded recovery ramdisk: $(INSTALLED_RECOVERY_RAMDISK_TARGET)")
 	$(hide) mkdir -p $(dir $@)
 	$(hide) mv $(INSTALLED_RECOVERY_RAMDISK_TARGET) $(INSTALLED_RECOVERY_RAMDISK_TARGET).orig
-	$(hide) cat $(INSTALLED_RECOVERY_RAMDISK_TARGET).orig $(PADDING) > $(INSTALLED_RECOVERY_RAMDISK_TARGET)
+	$(hide) cat $(PADDING) $(INSTALLED_RECOVERY_RAMDISK_TARGET).orig > $(INSTALLED_RECOVERY_RAMDISK_TARGET)
 	$(hide) touch $@
 
 
