@@ -3,13 +3,15 @@ vendor/lib/egl/eglsubAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
 vendor/lib/egl/libGLESv2_adreno.so
+vendor/lib/egl/libGLESv2S3D_adreno.so
 vendor/lib/egl/libq3dtools_adreno.so
 vendor/lib/libgsl.so
 vendor/lib/libC2D2.so
-vendor/lib/libsc-a3xx.so
+vendor/lib/libCB.so
+vendor/lib/libsc-a2xx.so
 vendor/lib/libadreno_utils.so
 vendor/lib/libbccQTI.so
-vendor/lib/libc2d30-a3xx.so
+vendor/lib/libc2d2_z180.so
 vendor/lib/libllvm-qcom.so
 etc/firmware/yamato_pfp.fw
 etc/firmware/yamato_pm4.fw
