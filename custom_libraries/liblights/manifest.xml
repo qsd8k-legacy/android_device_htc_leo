@@ -1,0 +1,14 @@
+<!--
+    Add this <hal> block into your device's vendor manifest
+    (commonly device/<oem>/<codename>/manifest.xml, referenced via
+    DEVICE_MANIFEST_FILE in BoardConfig.mk).
+-->
+<hal format="hidl">
+    <name>android.hardware.light</name>
+    <transport>hwbinder</transport>
+    <version>2.0</version>
+    <interface>
+        <name>ILight</name>
+        <instance>default</instance>
+    </interface>
+</hal>

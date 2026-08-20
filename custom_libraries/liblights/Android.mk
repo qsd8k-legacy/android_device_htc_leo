@@ -1,4 +1,4 @@
-# Copyright (C) 2008 The Android Open Source Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,22 +12,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH:= $(call my-dir)
-
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),htcleo)
+LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := lights.$(TARGET_BOOTLOADER_BOARD_NAME)
-
-LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
-
+LOCAL_MODULE := android.hardware.light@2.0-service.htcleo
+LOCAL_INIT_RC := android.hardware.light@2.0-service.htcleo.rc
+LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_MODULE_TAGS := optional
+LOCAL_PROPRIETARY_MODULE := true
 
-LOCAL_SRC_FILES := lights.c
-LOCAL_SHARED_LIBRARIES := liblog
-LOCAL_PRELINK_MODULE := false
+LOCAL_SRC_FILES := \
+    service.cpp \
+    Light.cpp
 
-include $(BUILD_SHARED_LIBRARY)
+LOCAL_CFLAGS := -Wall -Werror
 
-endif # TARGET_BOOTLOADER_NAME
+LOCAL_SHARED_LIBRARIES := \
+    libhidlbase \
+    liblog \
+    libutils \
+    android.hardware.light@2.0
+
+include $(BUILD_EXECUTABLE)
