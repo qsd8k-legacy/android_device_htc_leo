@@ -30,6 +30,8 @@ LOCAL_CFLAGS := -Wall -Werror
 
 LOCAL_SHARED_LIBRARIES := \
     libhidlbase \
+    libhidltransport \
+    libhwbinder \
     liblog \
     libutils \
     android.hardware.light@2.0
