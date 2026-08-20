@@ -162,6 +162,19 @@ int AkmSensor::setEnable(int32_t handle, int en)
     return err;
 }
 
+bool AkmSensor::isEnabled(int32_t handle) const
+{
+    int what = -1;
+    switch (handle) {
+        case ID_A: what = Accelerometer; break;
+        case ID_M: what = MagneticField; break;
+        case ID_O: what = Orientation;   break;
+    }
+    if (uint32_t(what) >= numSensors)
+        return false;
+    return (mEnabled & (1<<what)) != 0;
+}
+
 int AkmSensor::setDelay(int32_t handle, int64_t ns)
 {
 #ifdef ECS_IOCTL_APP_SET_DELAY

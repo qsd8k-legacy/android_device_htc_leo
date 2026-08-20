@@ -30,6 +30,17 @@
  * resolution by 4 bits.
  */
 
+/*
+ * NOTE on minDelay/maxDelay below: these describe the fastest/slowest
+ * sampling period this HAL will honor, in microseconds. They are NOT
+ * currently verified against the BMA150/AK8973/CM3602 datasheets or
+ * against what the kernel drivers actually accept via
+ * ECS_IOCTL_APP_SET_DELAY - AkmSensor.cpp's default is 200ms (5Hz) and
+ * nothing in this HAL enforces a floor on faster requests. Treat the
+ * values here as placeholders to be confirmed against the vendor kernel
+ * driver before shipping; SensorService will start rejecting requests
+ * faster than minDelay or slower than maxDelay once these are load-bearing.
+ */
 static const struct sensor_t sSensorList[] = {
 	{
         .name = "BMA150 3-axis Accelerometer",
@@ -40,6 +51,12 @@ static const struct sensor_t sSensorList[] = {
         .maxRange = 4.0f*9.81f,
         .resolution = (4.0f*9.81f)/256.0f,
         .power = 0.2f,
+        .minDelay = 20000,        // TODO: confirm fastest rate BMA150 supports
+        .maxDelay = 200000,
+        .fifoReservedEventCount = 0,
+        .fifoMaxEventCount = 0,   // no hardware FIFO on this SoC generation
+        .stringType = SENSOR_STRING_TYPE_ACCELEROMETER,
+        .flags = SENSOR_FLAG_CONTINUOUS_MODE,
         .reserved = {}
 	},
 	{
@@ -51,6 +68,12 @@ static const struct sensor_t sSensorList[] = {
         .maxRange = 2000.0f,
         .resolution = 1.0f/16.0f,
         .power = 6.8f,
+        .minDelay = 20000,        // TODO: confirm fastest rate AK8973 supports
+        .maxDelay = 200000,
+        .fifoReservedEventCount = 0,
+        .fifoMaxEventCount = 0,
+        .stringType = SENSOR_STRING_TYPE_MAGNETIC_FIELD,
+        .flags = SENSOR_FLAG_CONTINUOUS_MODE,
         .reserved = {}
 	},
         {
@@ -62,6 +85,12 @@ static const struct sensor_t sSensorList[] = {
         .maxRange = 360.0f,
         .resolution = 1.0f,
         .power = 7.0f,
+        .minDelay = 20000,
+        .maxDelay = 200000,
+        .fifoReservedEventCount = 0,
+        .fifoMaxEventCount = 0,
+        .stringType = SENSOR_STRING_TYPE_ORIENTATION,
+        .flags = SENSOR_FLAG_CONTINUOUS_MODE,
         .reserved = {}
 	},
         {
@@ -73,6 +102,18 @@ static const struct sensor_t sSensorList[] = {
         .maxRange = PROXIMITY_THRESHOLD_CM,
         .resolution = PROXIMITY_THRESHOLD_CM,
         .power = 0.5f,
+        .minDelay = 0,             // on-change: 0 is correct/required here
+        .maxDelay = 0,
+        .fifoReservedEventCount = 0,
+        .fifoMaxEventCount = 0,
+        .stringType = SENSOR_STRING_TYPE_PROXIMITY,
+        // TODO: add SENSOR_FLAG_WAKE_UP only once /dev/cm3602's kernel
+        // input device is confirmed to be registered as a wakeup source
+        // (device_init_wakeup + enable_irq_wake on the CM3602 IRQ). Setting
+        // it here without that would tell SensorService it can rely on
+        // this sensor to wake the SoC from suspend, which it currently
+        // cannot do.
+        .flags = SENSOR_FLAG_ON_CHANGE_MODE,
         .reserved = {}
 	},
         {
@@ -84,6 +125,12 @@ static const struct sensor_t sSensorList[] = {
         .maxRange = 10240.0f,
         .resolution = 1.0f,
         .power = 0.5f,
+        .minDelay = 0,             // on-change: 0 is correct/required here
+        .maxDelay = 0,
+        .fifoReservedEventCount = 0,
+        .fifoMaxEventCount = 0,
+        .stringType = SENSOR_STRING_TYPE_LIGHT,
+        .flags = SENSOR_FLAG_ON_CHANGE_MODE,
         .reserved = {}
 	 },
 };

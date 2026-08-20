@@ -35,8 +35,6 @@ protected:
     int         data_fd;
 
     static int openInput(const char* inputName);
-    static int64_t getTimestamp();
-
 
     static int64_t timevalToNano(timeval const& t) {
         return t.tv_sec*1000000000LL + t.tv_usec*1000;
@@ -55,11 +53,19 @@ public:
 
     virtual ~SensorBase();
 
+    // public so sensors_poll_context_t (nusensors.cpp) can timestamp
+    // synthetic events (e.g. META_DATA_FLUSH_COMPLETE) it generates itself
+    static int64_t getTimestamp();
+
     virtual int readEvents(sensors_event_t* data, int count) = 0;
     virtual bool hasPendingEvents() const;
     virtual int getFd() const;
     virtual int setDelay(int32_t handle, int64_t ns);
     virtual int setEnable(int32_t handle, int enabled) = 0;
+
+    // Required for flush(): is the sensor identified by this handle
+    // currently active? flush() on a disabled sensor must return -EINVAL.
+    virtual bool isEnabled(int32_t handle) const = 0;
 };
 
 /*****************************************************************************/

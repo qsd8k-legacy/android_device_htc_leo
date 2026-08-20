@@ -45,6 +45,7 @@ public:
     virtual int readEvents(sensors_event_t* data, int count);
     virtual bool hasPendingEvents() const;
     virtual int setEnable(int32_t handle, int enabled);
+    virtual bool isEnabled(int32_t handle) const { return mEnabled != 0; }
 };
 
 /*****************************************************************************/
