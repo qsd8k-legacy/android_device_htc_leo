@@ -1,13 +1,13 @@
 ## Android fstab for HTC Leo
 
 #<label>                                       <mnt_point>            <type>          <mnt_flags and options>        <fs_mgr_flags>
-/dev/block/mmcblk0p4                           /boot                  emmc             defaults                        recoveryonly
-/dev/block/mmcblk0p5                           /misc                  emmc             defaults                        recoveryonly
-/dev/block/mmcblk0p6                           /recovery              emmc             defaults                        recoveryonly
+/dev/block/mmcblk0p4                           /boot                  mtd             defaults                        recoveryonly
+/dev/block/mmcblk0p5                           /misc                  mtd             defaults                        recoveryonly
+/dev/block/mmcblk0p6                           /recovery              mtd             defaults                        recoveryonly
 /dev/block/mmcblk0p3                           /system                ext4            noatime,noauto_da_alloc,journal_async_commit,errors=panic wait,check
 /dev/block/mmcblk0p2                           /data                  ext4            noatime,noauto_da_alloc,journal_async_commit,errors=panic wait,check
 
 # zRAM
-/dev/block/zram0                            none                    swap      defaults      zramsize=52428800
+/dev/block/zram0    none    swap    defaults    zramsize=268435456
 
 /devices/platform/msm_sdcc.2/mmc_host/mmc1* auto vfat defaults voldmanaged=sdcard0:1,noemulatedsd,nonremovable
