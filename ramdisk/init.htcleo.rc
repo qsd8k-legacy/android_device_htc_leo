@@ -37,6 +37,10 @@ on boot
     # bluetooth car dock pin
     chown system system /sys/class/switch/dock/bt_pin
 
+    # Permissions for wifi
+    chown wifi wifi /sys/module/bcmdhd/parameters/firmware_path
+    chmod 0660 /sys/module/bcmdhd/parameters/firmware_path
+
     # Permissions for Liblights.
     chown system system /sys/class/leds/green/brightness
     chown system system /sys/class/leds/green/blink
